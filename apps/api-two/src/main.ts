@@ -5,7 +5,6 @@
 
 import express from 'express';
 import * as path from 'path';
-import { libOne } from '@test-org/lib-one';
 import { libTwo } from '@test-org/lib-two';
 import { nanoid } from 'nanoid';
 import { dirname } from 'path';

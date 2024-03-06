@@ -41,6 +41,22 @@
         "cwd": "dist",
         "command": "node ./apps/api-two/main.js"
       }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "dependsOn": [
+        "^build:prod"
+      ],
+      "defaultConfiguration": "dev",
+      "options": {
+        "cwd": "apps/api-one",
+        "parallel": false
+      },
+      "configurations": {
+        "dev": {
+          "command": "gcloud app deploy app.yaml --quiet"
+        }
+      }
     }
   },
   "tags": []

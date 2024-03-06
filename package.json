@@ -2,7 +2,11 @@
   "name": "@test-org/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "node ./dist/apps/api-two/main.js",
+    "gcp-build": "",
+    "deploy:app-one": "gcloud app deploy ./apps/api-two/app.yaml --quiet"
+  },
   "private": true,
   "dependencies": {
     "axios": "^1.6.0",
