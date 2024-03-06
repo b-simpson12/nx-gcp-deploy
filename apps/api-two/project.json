@@ -1,15 +1,15 @@
 {
-  "name": "api-one",
+  "name": "api-two",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/api-one/src",
+  "sourceRoot": "apps/api-two/src",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "@nx/esbuild:esbuild",
       "options": {
-        "main": "apps/api-one/src/main.ts",
-        "tsConfig": "apps/api-one/tsconfig.app.json",
-        "outputPath": "dist/apps/api-one"
+        "main": "apps/api-two/src/main.ts",
+        "tsConfig": "apps/api-two/tsconfig.app.json",
+        "outputPath": "dist/apps/api-two"
       },
       "configurations": {
         "prod": {
@@ -24,14 +24,14 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "api-one:build"
+        "buildTarget": "api-two:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "api-one:build:development"
+          "buildTarget": "api-two:build:development"
         },
         "production": {
-          "buildTarget": "api-one:build:production"
+          "buildTarget": "api-two:build:production"
         }
       }
     }

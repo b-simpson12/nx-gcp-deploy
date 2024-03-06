@@ -1,0 +1,21 @@
+{
+  "name": "lib-two",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lib-two/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/lib-two",
+        "main": "libs/lib-two/src/index.ts",
+        "tsConfig": "libs/lib-two/tsconfig.lib.json",
+        "assets": ["libs/lib-two/*.md"],
+        "generatePackageJson": true,
+        "format": ["cjs"]
+      }
+    }
+  },
+  "tags": []
+}

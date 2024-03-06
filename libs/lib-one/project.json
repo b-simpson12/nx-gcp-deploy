@@ -1,0 +1,21 @@
+{
+  "name": "lib-one",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lib-one/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/lib-one",
+        "main": "libs/lib-one/src/index.ts",
+        "tsConfig": "libs/lib-one/tsconfig.lib.json",
+        "assets": ["libs/lib-one/*.md"],
+        "generatePackageJson": true,
+        "format": ["cjs"]
+      }
+    }
+  },
+  "tags": []
+}
