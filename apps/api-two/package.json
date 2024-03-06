@@ -1,6 +1,7 @@
 {
   "name": "api-two",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "start": "node ./dist/main.js",
     "gcp-build": ""

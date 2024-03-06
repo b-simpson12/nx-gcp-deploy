@@ -34,6 +34,13 @@
           "buildTarget": "api-two:build:production"
         }
       }
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "dist",
+        "command": "node ./apps/api-two/main.js"
+      }
     }
   },
   "tags": []
