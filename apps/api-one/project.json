@@ -1,0 +1,24 @@
+{
+  "name": "api-one",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/api-one/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "api-one:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "api-one:build:development"
+        },
+        "production": {
+          "buildTarget": "api-one:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
