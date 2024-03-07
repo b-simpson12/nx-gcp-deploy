@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./dist/apps/api-two/main.js",
     "gcp-build": "",
-    "deploy:app-one": "gcloud app deploy ./apps/api-two/app.yaml --quiet"
+    "deploy:api-two": "gcloud app deploy ./apps/api-two/app.yaml --quiet"
   },
   "private": true,
   "dependencies": {
