@@ -69,8 +69,7 @@
         "cwd": "dist/apps/api-two",
         "parallel": false,
         "commands": [
-          "cp ../../../apps/api-two/app.yaml app.yaml",
-          "gcloud app deploy app.yaml --quiet"
+          "gcloud app deploy ../../../apps/api-two/app.yaml --quiet"
         ]
       }
     }

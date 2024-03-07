@@ -1,3 +1,4 @@
+import {upperCase} from 'lodash-es'
 export function libTwo(): string {
-  return 'lib-two';
+  return upperCase('lib-two');
 }

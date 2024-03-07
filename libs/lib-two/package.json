@@ -2,6 +2,6 @@
   "name": "@test-org/lib-two",
   "version": "0.0.1",
   "dependencies": {},
-  "type": "commonjs",
+  "type": "module",
   "main": "./index.cjs"
 }

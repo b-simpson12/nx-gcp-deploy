@@ -13,7 +13,7 @@
         "tsConfig": "libs/lib-two/tsconfig.lib.json",
         "assets": ["libs/lib-two/*.md"],
         "generatePackageJson": true,
-        "format": ["cjs"]
+        "format": ["esm"]
       }
     }
   },

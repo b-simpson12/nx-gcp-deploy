@@ -1,1 +1,1 @@
-export * from './lib/lib-two';
+export * from './lib/lib-two.js';
