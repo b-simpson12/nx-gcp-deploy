@@ -20,6 +20,23 @@
         }
       }
     },
+    "build-for-deploy": {
+      "executor": "@nx/esbuild:esbuild",
+      "defaultConfiguration": "prod",
+      "options": {
+        "main": "apps/api-two/src/main.ts",
+        "tsConfig": "apps/api-two/tsconfig.app.json",
+        "outputPath": "dist/apps/api-two"
+      },
+      "configurations": {
+        "prod": {
+          "optimization": false,
+          "generatePackageJson": true,
+          "extractLicenses": true,
+          "inspect": false
+        }
+      }
+    },
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
@@ -45,17 +62,16 @@
     "deploy": {
       "executor": "nx:run-commands",
       "dependsOn": [
-        "^build:prod"
+        "build-for-deploy"
       ],
       "defaultConfiguration": "dev",
       "options": {
-        "cwd": "apps/api-one",
-        "parallel": false
-      },
-      "configurations": {
-        "dev": {
-          "command": "gcloud app deploy app.yaml --quiet"
-        }
+        "cwd": "dist/apps/api-two",
+        "parallel": false,
+        "commands": [
+          "cp ../../../apps/api-two/app.yaml app.yaml",
+          "gcloud app deploy app.yaml --quiet"
+        ]
       }
     }
   },
